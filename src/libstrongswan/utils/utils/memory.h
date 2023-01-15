@@ -25,6 +25,10 @@
 
 #ifdef HAVE_EXPLICIT_BZERO
 #include <string.h>
+#else
+#ifdef HAVE_STDINT_H
+# include <stdint.h> /* for uintptr_t */
+#endif
 #endif
 
 /**
